@@ -57,13 +57,15 @@ isEqualK = (my_object1, my_object2) => {
 console.log(isEqualK({ a: 1, b: 1 }, { a: 1, b: 2 }))
 console.log(isEqualK({ a: 1, b: 1 }, { a: 1, b: 1 }))
 /******************************************************** */
+console.log("\n\n Problem 8")
 intersection = (object1, object2) => {
     object = {}
     for (let i in object1) {
-        for (let y in object2) {
-            if (i === y && object1[i] === object2[y]) object[i] = object1[i]
+        if (object1[i] === object2[i]) {
+            object[i] = object1[i]
         }
     }
     return object
 }
 console.log(intersection({ z: 1, b: 2 }, { a: 1, b: 2 }))
+console.log(intersection({ a: 5, b: 2 }, { a: 1, b: 3 }))
